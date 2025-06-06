@@ -1,6 +1,18 @@
+<<<<<<< HEAD
+fastapi
+uvicorn
+joblib
+scikit-learn==1.6.1
+pydantic
+<<<<<<< HEAD
+jinja2
+=======
+=======
 fastapi
 uvicorn
 joblib
 scikit-learn==1.6.1
 pydantic
 jinja2
+>>>>>>> 93f55c1 (Ajout interface HTML pour formulaire utilisateur)
+>>>>>>> db480e5 (Ajout interface HTML pour formulaire utilisateur)

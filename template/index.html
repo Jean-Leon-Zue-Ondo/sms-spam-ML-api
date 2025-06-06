@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détecteur de SMS Spam</title>
+</head>
+<body>
+  <h1>Analyse de message SMS</h1>
+  <form method="post">
+    <textarea name="message" rows="6" cols="60" placeholder="Entrez un SMS ici..."></textarea><br>
+    <button type="submit">Analyser</button>
+  </form>
+
+  {% if result %}
+    <h2>Résultat : {{ result }}</h2>
+  {% endif %}
+</body>
+</html>
