@@ -3,16 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <title>Détecteur de SMS Spam</title>
+  <style>
+    body {
+      background: linear-gradient(#f0f0f0, #ddd);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .email-window {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 450px;
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: #1e88e5;
+      color: white;
+      padding: 12px 16px;
+      font-weight: bold;
+    }
+
+    .form-content {
+      padding: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 120px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      margin-top: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-  <h1>Analyse de message SMS</h1>
-  <form method="post">
-    <textarea name="message" rows="6" cols="60" placeholder="Entrez un SMS ici..."></textarea><br>
-    <button type="submit">Analyser</button>
-  </form>
 
-  {% if result %}
-    <h2>Résultat : {{ result }}</h2>
-  {% endif %}
+  <div class="email-window">
+    <div class="header">Nouveau message</div>
+    <div class="form-content">
+      <form method="post">
+        <textarea name="message" placeholder="Entrez un message SMS..."></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+
+      {% if result %}
+        <div class="result">Résultat : {{ result }}</div>
+      {% endif %}
+    </div>
+  </div>
+
 </body>
 </html>
